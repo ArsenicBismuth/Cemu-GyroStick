@@ -1,6 +1,6 @@
 # Cemu Gyro Joystick
 
-![The device](docs/device.jpg)
+<img src="./docs/device.jpg" width="500">
 
 Using Arduino & IMU module, you can turn your generic joystick to have gyro & accelerometer sensors capability to be used on CEMU (WiiU Emulator).
 
