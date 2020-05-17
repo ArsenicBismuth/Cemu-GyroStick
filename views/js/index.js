@@ -41,8 +41,8 @@ module.exports = async function(arg) {
     
     // Gyro conversion: float (+-1) => *16b (+-32767) unit => * 250/32767 deg/sec
 	let gySens = -1.0 * 250;
-    // Accel conversion: float (+-1) => *16b (+-32767) unit => * 2g/32767 m/s2
-	let acSens = -1.0 * 2 * 9.8;
+    // Accel conversion: float (+-1) => *16b (+-32767) unit => * 2/32767 g
+	let acSens = -1.0 * 2 * 1;
 
 	let files = await klaw(path.join(__rootDir, '/views/md'));
 	for (let file of files) {
@@ -147,13 +147,13 @@ module.exports = async function(arg) {
             let stickL = gamepad.stick('left').query();
 			let gyro = {
 				z: ((gyaxises.includes('x')) ? stickR.x : 0),
-				x: ((gyaxises.includes('y')) ? stickR.y : 0),
-				y: ((gyaxises.includes('z')) ? stickR.z : 0)
+				x: ((gyaxises.includes('y')) ? -stickR.y : 0),
+				y: ((gyaxises.includes('z')) ? -stickR.z : 0)
 			};
             let accel = {
 				x: ((acaxises.includes('x')) ? stickL.x : 0),
 				z: ((acaxises.includes('y')) ? stickL.y : 0),   // Y <-> Z in Cemuhook
-				y: ((acaxises.includes('z')) ? stickL.z : 0)
+				y: ((acaxises.includes('z')) ? -stickL.z : 0)
 			};
 			for (axis of gyaxises) {
 				if (gyro[axis] > stickDeadZone) {
