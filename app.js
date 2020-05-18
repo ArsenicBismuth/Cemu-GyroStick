@@ -46,8 +46,8 @@
 				nodeIntegration: true
 			}
 		};
-		windowPrms.width = 3840 / 4;
-		windowPrms.height = 2160 / 2;
+		windowPrms.width = 1920 / 3;
+		windowPrms.height = 1080 / 2;
 
 		mainWindow = new BrowserWindow(windowPrms);
 

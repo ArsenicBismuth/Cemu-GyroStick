@@ -13,7 +13,7 @@ The end result is a very responsive device, at a similar level to a controller w
 
 ## Changes:
 
--   Joystick now also controls the accelerometer.
+-   Add capability to control the accelerometer.
 -   3-axis for gyro and 3-axis for accelerometer.
 -   Removing all preprocessing (except linear scaling).
 -   Custom [Contro module](https://github.com/shroudedcode/contro) to accept 6-axis joystick instead of 4.
