@@ -14,7 +14,7 @@ The end result is a very responsive device, at a similar level to a controller w
 ## Changes:
 
 -   Add capability to control the accelerometer.
--   3-axis for gyro and 3-axis for accelerometer.
+-   3 axes for gyro and 3 axes for accelerometer.
 -   Removing all preprocessing (except linear scaling).
 -   Custom [Contro module](https://github.com/shroudedcode/contro) to accept 6-axis joystick instead of 4.
 -   Also removing the requirement which only accept standard joystick.
@@ -45,6 +45,12 @@ It's lengthy, but most of it are basic steps (the main steps are in  **bold**). 
 1.  Run Cemu-GyroStick.
 2.  Plug Arduino, then plug Joystick.
 
+## Extras
+Some discussions regarding this project, you may find answers to your questions there.
+
+- [CEMU subreddit](https://www.reddit.com/r/cemu/comments/glf1t4).
+- [Gaming subreddit](https://www.reddit.com/r/gaming/comments/gm1ogb/).
+- [Wiring](docs/pinout.png).
 
 ## Credits
 - Cemu no Gyro by [Quinton Ashley](https://github.com/quinton-ashley/).
